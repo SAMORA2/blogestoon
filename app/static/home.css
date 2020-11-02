@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Lalezar', cursive;
+}
+
+.base__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 2.8rem;
+    
+}
+
+.base__header>a {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+}
+
+.base__header>.base__header-btn {
+    margin-top: 3px;
+    font-size: 30px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    line-height: 27px;
+    border: 2px solid whitesmoke;
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.base__header>.base__header-btn:hover {
+    background: whitesmoke;
+    color: #2196F3;
+}
+
+.base__main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+}
+
+.base__main-image {
+    margin: 2%;
+    width: 40%;
+    height: 40%;
+    margin-left: 100px;
+}
+
+.base__main-context {
+    display: inline;
+    width: 30%;
+    height: max-content;
+    margin: 10%;
+}
+
+.base__main-context>h1 {
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: 4.8rem;
+    text-align: right;
+    margin: 3%;
+    margin-left: 0;
+    color: whitesmoke;
+}
+
+.base__start-button {
+    font-size: 2rem;
+    margin: 3%;
+    float: right;
+}
+
+.base__start-button>a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+    .base__main-context>h1 {
+        font-size: 3.7rem;
+    }
+    .base__main-image {
+        margin: 4%;
+        width: 42%;
+        height: 42%;
+    }
+}
+
+@media (min-width: 778px) and (max-width: 1200px) {
+    .base__main-context>h1 {
+        font-size: 3.3rem;
+    }
+    .base__main-context {
+        width: 60%;
+        position: absolute;
+        right: 0;
+        margin-top: 47%;
+    }
+    .base__main-image {
+        margin: 4%;
+        width: 53%;
+        height: 53%;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 230px) and (max-width: 778px) {
+    .base__main-context {
+        width: 100%;
+        float: right;
+    }
+    .base__main-context>h1 {
+        font-size: 2.5rem;
+        
+    }
+    .base__main-image {
+        margin: 4%;
+        margin-left: 10%;
+        width: 65%;
+        height: 65%;
+    }
+    .base__start-button {
+        font-size: 1.4rem;
+        margin: 3%;
+        float: right;
+    }
+}

@@ -1,0 +1,135 @@
+.container-fluid {
+
+    background-color: rgb(30, 134, 224);
+    position: sticky;
+    top: 0;
+    box-shadow: -2px 4px 14px 3px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: -2px 4px 14px 3px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: -2px 4px 14px 3px rgba(0, 0, 0, 0.76);
+}
+
+
+.container-fluid>.flex-navbar {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.2rem;
+
+}
+
+.container-fluid>.flex-navbar>a {
+    text-decoration: none;
+    color: inherit;
+    color: rgb(226, 226, 226);
+    margin-right: 8px;
+}
+
+.container-fluid>.flex-navbar>.left-items>a {
+    text-decoration: none;
+    color: inherit;
+    color: rgb(226, 226, 226);
+}
+
+.header {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    justify-content: space-between;
+    height: auto;
+    align-content: center;
+    border-bottom: 1px solid rgb(168, 175, 179);
+}
+.right-header{
+    display: flex;
+
+}
+.right-header>h6 {
+    margin-top: 25px;
+    margin-left: 1rem;
+    padding: 0;   
+    font-size: 1.7rem;
+}
+.right-header > img {
+    width: 60px;
+    height: 68px;
+    padding: 5px;
+    margin-left: 2%;
+    
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left-header>* {
+    font-size: 1.5rem;
+    margin-right: 45px;
+    margin-top: 30px;
+
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    
+}
+.post-content{
+    margin: 2% auto;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    justify-content: flex-end;
+    height: auto;
+    align-content: center;
+    
+}
+
+.content > *{
+    direction: ltr;
+    text-align: justify;
+}
+.delete-btn{
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2%;
+}
+.delete-btn > .btn{
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+@media (max-width:1000px) and (min-width:400px) {
+    .container-fluid>.flex-navbar {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:600px) {
+    .container-fluid>.flex-navbar {
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width:400px) {
+    .container-fluid>.flex-navbar {
+        font-size: 0.6rem;
+    }
+}

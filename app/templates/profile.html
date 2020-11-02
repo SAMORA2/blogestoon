@@ -1,0 +1,75 @@
+{% extends 'main_page.html' %}
+
+
+{% block profile %}
+
+
+<div class="flex-container">
+  <div class="container">
+    <div class="profile-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ image_src }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ current_user.username }}</h2>
+          <p class="text-secondary">{{ current_user.email }}</p>
+        </div>
+
+      </div>
+
+      <div class="profile-content-section">
+        <form method="POST" action="" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">ویرایش اطلاعات</legend>
+            <div class="form-group">
+              {{ form.username.label(class="form-control-label") }}
+
+              {% if form.username.errors %}
+              {{ form.username(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                <p>نام کاربری باید 2 تا 20 کارکتر باشد</p>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.username(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="form-group">
+              {{ form.email.label(class="form-control-label") }}
+              {% if form.email.errors %}
+              {{ form.email(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <p>ایمیل وارد شده معتبر نیست</p>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.email(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="form-group img-upload">
+              {{ form.picture.label(class="form-control-label") }}
+              {{form.picture(class ="form-control-file ")}}
+              {% if form.picture.errors %}
+                <!-- type error -->
+              {% endif %}
+            </div>
+            <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info myButton") }}
+            </div>
+            
+            
+          </fieldset>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}

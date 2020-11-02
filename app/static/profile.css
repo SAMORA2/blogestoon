@@ -1,0 +1,137 @@
+body {
+    background: rgb(66, 143, 189);
+    background: linear-gradient(90deg, rgba(66, 143, 189, 1) 26%, rgba(15, 56, 173, 1) 89%);
+}
+
+
+.flex-container {
+    width: auto;
+    height: 84%;
+    margin: 2%;
+    padding: 5px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-content-section {
+
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 5rem;
+    margin-left: 9rem;
+    width: 400px;
+    height: 500px;
+}
+
+.profile-section {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+
+    padding: 20px;
+    border: 6px solid #060930;
+    position: relative;
+    background-color: #eee;
+}
+
+.media-body>p {
+    font-size: 1.5rem;
+
+}
+
+.media-body>h2 {
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+.account-img {
+    width: 30%;
+    height: 10%;
+    margin-left: 10%;
+}
+
+
+
+.form-group>.form-control-label {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+
+}
+
+.form-group>.btn {
+    font-size: 1.5rem;
+
+
+}
+
+.form-group>.myButton {
+
+    float: right;
+    font-size: 1.5rem;
+}
+
+.form-group>legend {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 3rem;
+
+}
+.media {
+    margin-top: 20px;
+
+}
+.img-upload{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    
+}
+
+
+@media (max-width:800px) {
+    .media {
+        width: 400px;
+        margin-left: -40px;
+    }
+
+    .form-group>.form-control-label {
+
+        font-size: 1.4rem;
+    }
+
+    .form-group>.form-control {
+        margin-left: 20%;
+        width: 300px;
+    }
+
+    .form-group>.myButton {
+
+        font-size: 1rem;
+    }
+
+    .media-body>h2 {
+        font-size: 3rem;
+        font-weight: lighter;
+    }
+
+    .media-body>p {
+        font-size: 1.2rem;
+
+    }
+
+    .profile-section {
+        width: 400px;
+        height: fit-content;
+        margin: auto;
+
+    }
+
+    .profile-content-section {
+        margin-left: -10%;
+
+    }
+
+}

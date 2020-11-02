@@ -1,0 +1,109 @@
+.bg-steel {
+    background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+.flex-section {
+    background: rgb(66, 143, 189);
+    background: linear-gradient(90deg, rgba(66, 143, 189, 1) 26%, rgba(15, 56, 173, 1) 89%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.content-section {
+   
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 6px solid #060930;
+}
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.form-group > legend {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group > h5,h6{
+    display: flex;
+    justify-content: flex-end;
+}
+.form-group > .form-control{
+    width: 400px;
+}
+
+.form-check {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-muted{
+    display: flex;
+    justify-content: flex-end;
+}

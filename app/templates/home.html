@@ -1,0 +1,22 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Blogestoon</title>
+{% endblock %} {% block content %}
+<div class="container">
+    <div class="base__header">
+        <a href="{{ url_for('users.login') }}" class="btn base__header-btn">حساب کاربری</a>
+       
+        <a href="{{ url_for('main.index') }}">بلاگستون </a>
+    </div>
+</div>
+
+<div class="base__main-section">
+    <img class="base__main-image" src="../static/img/main-blog.svg" alt="">
+    <div class="base__main-context">
+        <h1>براحتی دست نوشته های خود را با دیگران به اشتراک بگذارید</h1>
+        <button type="button" class="btn btn-light btn-lg base__start-button"><a href="{{ url_for('users.register') }}">همین حالا شروع کنید</a></button>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="flex-navbar">
+        <div class="left-items">
+            <a class="ml-5" href="{{ url_for('posts.new_post', user=current_user.username) }}">پست جدید</a>
+            <a class="ml-5" href="{{ url_for('users.profile', user=current_user.username) }}">پروفایل</a>
+            <a href="{{ url_for('users.logout') }}">خروج</a>
+
+        </div>
+
+        <a href="{{ url_for('main.logged_in', user=current_user.username) }}">بلاگستون</a>
+    </div>
+</div>
+
+{% for post in posts %}
+<div class="container mt-5">
+    <div class="post m-2">
+        <div class="header">
+            <div class="left-header">
+                <h6 style="font-size: large;">{{post.title}}</h6>
+                <h6 style="font-size: large;">{{post.date_posted.strftime('%Y-%m-%d')}}</h6>
+            </div>
+            <div class="right-header">
+                <h6><a href="{{ url_for('users.user_post', user=post.author.username,logged_user = current_user.username) }}"
+                        style="text-decoration: none; ">{{post.author.username}}</a></h6>
+                <!-- <h6>{{post.author.username}}</h6> -->
+                <img src="{{url_for('static',filename='profile_pics/'+post.author.image_file)}}" class="rounded-circle">
+
+            </div>
+        </div>
+        <div class="post-content">
+            <div class="content">
+                <p>{{post.content |safe}} </p>
+            </div>
+
+        </div>
+        {% if post.author.username == current_user.username %}
+        <div class="delete-btn">
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#{{post.id}}">حذف
+                پست</button>
+
+        </div>
+        {% endif%}
+    </div>
+
+</div>
+<div class="modal fade" id="{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 style="border-bottom: 4px solid red;" class="modal-title " id="deleteModalLabel">حذف پست </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3 style="text-align: right;">آیا واقعا میخواهید این پست را حذف کنید؟</h3>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                <form action="{{url_for('posts.delete_post',post_id=post.id)}}" method="POST">
+                    <input class="btn btn-danger" type="submit" value="حذف">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+
+{% block new_post %}
+{% endblock %}
+
+{% endblock %}
+
+{% block profile %}
+{% endblock %}
