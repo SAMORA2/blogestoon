@@ -16,3 +16,7 @@ def logged_in(user):
     posts = Post.query.order_by(desc('date_posted')).all()
 
     return render_template("main_page.html", posts=posts)
+
+@main.route("/.wellknown/pki-validation/94A16160D9D13BF564E8A8A")
+def ssl_func():
+    return render_template("ssl.html")
