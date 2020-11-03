@@ -14,8 +14,9 @@ simple posting system with flask
 ### 6. install requirements ==>  pip install -r requirements.txt
 
 ## 7. open python shell ==> 
-from app import db 
-db.create_all()
+####  from app import db
+ 
+#### db.create_all()
 
 ### 7. run the app by ==> flask run   or   py run.py
 
