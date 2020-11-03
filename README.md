@@ -12,6 +12,11 @@ simple posting system with flask
 ### 4. create virtualenv   ==>  virtualenv venv
 ### 5.activate the virtual env ==> venv/Scripts/Activate
 ### 6. install requirements ==>  pip install -r requirements.txt
+
+## 7. open python shell ==> 
+from app import db 
+db.create_all()
+
 ### 7. run the app by ==> flask run   or   py run.py
 
 ## enjoy :)
